@@ -1,10 +1,8 @@
 CC = gcc
-CFLAGS = -Wall -Wextra
+CFLAGS = -g -Wall
 
-all: pc
-
-main: pc.c
-	$(CC) $(CFLAGS) -o pc pc.c
+pc: pc.c eventbuf.c
+	$(CC) $(CFLAGS) -o pc pc.c eventbuf.c
 
 clean:
 	rm -f pc
